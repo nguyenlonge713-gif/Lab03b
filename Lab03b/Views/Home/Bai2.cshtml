@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "Bài 2 - TO-DO LIST";
+}
+
+<h2>TO-DO LIST</h2>
+
+<div class="todo-container">
+
+    <div class="nhap">
+        <input type="text"
+               id="txtCongViec"
+               placeholder="Nhập công việc..." />
+
+        <button onclick="ThemCongViec()">
+            Thêm
+        </button>
+    </div>
+
+    <ul id="danhSach"></ul>
+
+</div>
+
+<style>
+
+    .todo-container {
+        width: 500px;
+        margin: 30px auto;
+    }
+
+    .nhap {
+        display: flex;
+        gap: 10px;
+    }
+
+    #txtCongViec {
+        flex: 1;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .nhap button {
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    #danhSach {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+        #danhSach li {
+            padding: 10px;
+            margin-bottom: 8px;
+            background-color: #eeeeee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+    .congviec {
+        cursor: pointer;
+        flex: 1;
+    }
+
+    .hoanThanh {
+        text-decoration: line-through;
+        color: gray;
+    }
+
+    .nutXoa {
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+</style>
+
+<script src="~/Scripts/Bai2.js"></script>
